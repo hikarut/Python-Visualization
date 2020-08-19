@@ -1,20 +1,15 @@
-# Python-dev
+# Python-Visualization
+※`dc` = `docker-compose`
+
 * コンテナの起動
 ```
-$ docker-compose up -d --build
+$ dc up -d --build
 ```
 
-* FastAPIのインストール
+* Dashの起動
 ```
-$ docker-compose exec python3 pip install fastapi uvicorn
-```
-
-* FastAPIを実行
-```
-$ docker-compose exec python3 zsh -c "cd src && uvicorn main:app --host 0.0.0.0 --reload"
+$ dc exec python-visualization zsh -c "python src/dash/app.py"
 ```
 
 * 以下URLにアクセス
-  * http://localhost:8000/
-  * http://localhost:8000/items/5?q=somequery
-  * http://localhost:8000/docs
+  * http://0.0.0.0:8001/

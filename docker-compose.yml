@@ -1,11 +1,11 @@
 version: '3'
 services:
-  python3:
+  python-visualization:
     restart: always
     build: .
-    container_name: 'python3'
+    container_name: 'python-visualization'
     ports:
-      - "8000:8000"
+      - "8001:8001"
     working_dir: '/root/'
     tty: true
     volumes:
