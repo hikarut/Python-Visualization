@@ -11,6 +11,9 @@ RUN pip install --upgrade setuptools
 RUN pip install dash==1.14.0
 RUN pip install pandas
 
+# streamlit
+RUN pip install streamlit
+
 ENV LANG ja_JP.UTF-8
 ENV LANGUAGE ja_JP:ja
 ENV LC_ALL ja_JP.UTF-8

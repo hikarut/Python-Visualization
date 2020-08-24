@@ -1,0 +1,5 @@
+[server]
+port=8001
+
+[browser]
+serverAddress="0.0.0.0"

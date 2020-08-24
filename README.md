@@ -6,9 +6,19 @@
 $ dc up -d --build
 ```
 
-* Dashの起動
+### Dash
+* 起動
 ```
 $ dc exec python-visualization zsh -c "python src/dash/app.py"
+```
+
+* 以下URLにアクセス
+  * http://0.0.0.0:8001/
+
+### Streamlit
+* 起動
+```
+$ dc exec python-visualization zsh -c "cd src/streamlit && streamlit run app.py"
 ```
 
 * 以下URLにアクセス
