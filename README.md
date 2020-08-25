@@ -23,3 +23,8 @@ $ dc exec python-visualization zsh -c "cd src/streamlit && streamlit run app.py"
 
 * 以下URLにアクセス
   * http://0.0.0.0:8001/
+
+* 設定確認
+```
+$ streamlit config show
+```
