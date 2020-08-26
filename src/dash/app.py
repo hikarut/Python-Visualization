@@ -14,15 +14,7 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
-# assume you have a "long-form" data frame
-# see https://plotly.com/python/px-arguments/ for more options
-# df = pd.DataFrame({
-#     "Fruit": ["Apples", "Oranges", "Bananas", "Apples", "Oranges", "Bananas"],
-#     "Amount": [4, 1, 2, 2, 4, 5],
-#     "City": ["SF", "SF", "SF", "Montreal", "Montreal", "Montreal"]
-# })
 b1_data = pd.read_csv('src/data/b1_2019.csv')
-# b1_data.head()
 
 # fig = px.bar(df, x="Fruit", y="Amount", color="City", barmode="group")
 # fig = px.bar(b1_data, x="home_team", y="attendance", color="home_victory", barmode="group")
@@ -52,9 +44,6 @@ app.layout = html.Div(children=[
 def update_figure(selected):
     filtered_df = b1_data[b1_data.arena == selected]
 
-    # fig = px.scatter(filtered_df, x="gdpPercap", y="lifeExp",
-    #                  size="pop", color="continent", hover_name="country",
-    #                  log_x=True, size_max=55)
     fig = px.bar(filtered_df, x="home_team", y="attendance", color="home_victory", barmode="group")
 
     fig.update_layout(transition_duration=500)
